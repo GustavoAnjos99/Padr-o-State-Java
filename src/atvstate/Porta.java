@@ -13,15 +13,17 @@ public class Porta {
     public final Estado fechada = new Fechada();
     public final Estado fechando = new Fechando();
     public final Estado abrindo = new Abrindo();
-    
+    public final Estado manterAberta = new ManterAberta();
+    Estado[] estados = {aberta, fechada, fechando, abrindo, manterAberta};
     private Estado estadoAtual;
+    
     
     public Estado status(){
         return estadoAtual;
     }
     
-    public void setEstado(Estado e){
-        this.estadoAtual = e;
+    public void setEstado(int i){
+        this.estadoAtual = estados[i];
     }
     
     public void clicar(){

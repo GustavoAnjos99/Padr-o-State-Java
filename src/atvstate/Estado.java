@@ -10,5 +10,4 @@ package atvstate;
  */
 public interface Estado {
     public Estado clicar();
-    
 }

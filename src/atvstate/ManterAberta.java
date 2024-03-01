@@ -8,18 +8,15 @@ package atvstate;
  *
  * @author dti
  */
-public class Aberta implements Estado {
-    
+public class ManterAberta implements Estado {
     @Override
     public Estado clicar(){
-       Estado manterAberta = new ManterAberta();
-       return manterAberta;
+       Estado fechando = new Fechando();
+       return fechando;
     };
     
     @Override
     public String toString(){
-        return("aberta");
+        return("mantendo aberta");
     }
-    
-    
 }
